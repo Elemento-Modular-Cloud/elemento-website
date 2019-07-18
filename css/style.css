@@ -29,10 +29,26 @@ img-left {
   float: left;
 }
 
+.img-left {
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+  height: auto;
+  float: left;
+}
+
 img-right {
   display: flex;
   width: 100%;
   max-height: 400px;
+  height: auto;
+  float: right;
+}
+
+.img-right {
+  display: flex;
+  width: 100%;
+  max-height: 200px;
   height: auto;
   float: right;
 }
@@ -87,13 +103,13 @@ img-right {
 /* The styling for the static div. */
 .static {
   background: #0C0F13;
-  -webkit-box-shadow:0 0 60px rgb(84, 103, 128); 
-  -moz-box-shadow: 0 0 60px rgb(84, 103, 128); 
+  -webkit-box-shadow:0 0 60px rgb(84, 103, 128);
+  -moz-box-shadow: 0 0 60px rgb(84, 103, 128);
   box-shadow:0 0 60px rgb(84, 103, 128);
 }
 
 .logo::after {
-  background-image: url('/img/logos/MarkDark.svg');
+  background-image: url('https://elemento.cloud/img/logos/MarkDark.svg');
   background-repeat: no-repeat;
   background-size: 25%;
   background-position: center 30%;
