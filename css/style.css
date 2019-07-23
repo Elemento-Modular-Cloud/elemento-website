@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 html,body {
   margin:0;
   padding:0;
+  font-family: 'Muli', sans-serif;
 }
 
 .page-background{
@@ -71,7 +74,7 @@ img-right {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 80vh;
+  height: 50vh;
 
   /* For text formatting. */
   display: flex;
@@ -103,13 +106,19 @@ img-right {
 /* The styling for the static div. */
 .static {
   background: #0C0F13;
-  -webkit-box-shadow:0 0 60px rgb(84, 103, 128);
+
+  box-shadow: 0 0 60px rgb(84, 103, 128);
+  -webkit-box-shadow: 0 0 60px rgb(84, 103, 128);
   -moz-box-shadow: 0 0 60px rgb(84, 103, 128);
-  box-shadow:0 0 60px rgb(84, 103, 128);
+  -o-box-shadow: 0 0 60px rgb(84, 103, 128);
+
+  border-color: rgb(84, 103, 128);
+  border-width: 2px 0px 2px 0px;
+  border-style: solid;
 }
 
 .logo::after {
-  background-image: url('https://elemento.cloud/img/logos/MarkDark.svg');
+  background-image: url('/img/logos/MarkDark.svg');
   background-repeat: no-repeat;
   background-size: 25%;
   background-position: center 30%;
