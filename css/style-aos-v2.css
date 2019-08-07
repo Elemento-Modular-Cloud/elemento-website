@@ -113,7 +113,7 @@ elemento {
   position: relative;
   margin-top: 40px;
   padding: 0px 0px 0px 0px;
-  height: 50vh;
+  height: 40vh;
 
   display: flex;
   align-items: center;
@@ -163,7 +163,8 @@ footer {
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: 10vh;
-  /* margin-bottom: 100px; */
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   /* background: #0C0F13; */
 
   /* box-shadow: 0 0 100px black;
