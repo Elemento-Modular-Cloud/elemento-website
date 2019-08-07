@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+html,body {
+  margin:0;
+  padding:0;
+  font-family: 'Muli', sans-serif;
+  color: white;
+}
+
+.page-background{
+  background: #0C0F13;
+  margin: 0;
+  /* background: #FFF; */
+}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 15px;
+  background: #0C0F13;
+}
+
+img-left {
+  display: flex;
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  float: left;
+}
+
+.img-left {
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+  height: auto;
+  float: left;
+}
+
+img-right {
+  display: flex;
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  float: right;
+}
+
+.img-right {
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+  height: auto;
+  float: right;
+}
+
+.first-section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 50vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  background: #0C0F13;
+
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-2px) scale(1);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: #0C0F13;
+
+  box-shadow: 0 -20px 20px -5px rgb(84, 103, 128);
+  -webkit-box-shadow: 0 -20px 20px -5px rgb(84, 103, 128);
+  -moz-box-shadow: 0 -20px 20px -5px rgb(84, 103, 128);
+  -o-box-shadow: 0 -20px 20px -5px rgb(84, 103, 128);
+
+  /* border-color: rgb(84, 103, 128); */
+  /* border-width: 2px 0px 2px 0px; */
+  /* border-style: solid; */
+}
+
+.logo {
+  background-image: url('/img/logos/MarkDark.svg');
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: center 30%;
+}
+
+.margined {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+.footer {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 7vh;
+  margin-bottom: 2.5vh;
+  background: #0C0F13;
+
+  box-shadow: 0 0 60px rgb(84, 103, 128);
+  -webkit-box-shadow: 0 0 60px rgb(84, 103, 128);
+  -moz-box-shadow: 0 0 60px rgb(84, 103, 128);
+  -o-box-shadow: 0 0 60px rgb(84, 103, 128);
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+a:visited {
+  color: rgb(233, 164, 39);
+}
+a:link {
+  color: rgb(233, 164, 39);
+}
+a:active {
+  color: rgb(255, 246, 228);
+}
+a:hover {
+  color: rgb(244, 211, 108);
+}
+
+.e-mail:before {
+  content: attr(data-website) "\0040" attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
