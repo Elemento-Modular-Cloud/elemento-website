@@ -12,46 +12,30 @@ html,body {
 
 h2 {
   font-family: 'Muli', sans-serif;
-  font-size: 32px;
+  font-size: 2.3vmin;
   font-weight: bold;
 }
 
 h4 {
   font-family: 'Muli', sans-serif;
-  font-size: 21px;
+  font-size: 2vmin;
   font-weight: bold;
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.7vmin;
 }
 
 .page-background{
-  /* background: #0C0F13; */
   margin: 0;
-  /* background: #FFF; */
   background-image: linear-gradient(-90deg, #0C0F13 10%, black 40%, black 60%, #0C0F13 90%);
-}
-
-.wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 15px;
-  /* background: #0C0F13; */
 }
 
 .first-section {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 96vh;
+  height: 92.5vh;
 
   /* For text formatting. */
   display: flex;
@@ -69,7 +53,7 @@ p {
     /* Needed for children to be absolutely positioned relative to the parent. */
     position: relative;
     /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 100vh;
+    height: 92.5vh;
   
     /* For text formatting. */
     display: flex;
@@ -83,48 +67,27 @@ p {
 
     background-image: url('/img/logos/MarkDark.svg');
     background-repeat: no-repeat;
-    background-size: 50vh;
+    background-size: 50vmin;
     background-position: center 50%;
   }
 }
 
-.parallax::after {
-  /* background: #0C0F13; */
-
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-2px) scale(1);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */
-  z-index: -1;
+.responsive-icon{
+    height: 35vw;
+    max-height: 30vh;
 }
 
 elemento {
   position: relative;
-  margin-top: 40px;
-  padding: 0px 0px 0px 0px;
-  height: 40vh;
+  margin-top: 7vmin;
+  padding: 7vmin 0px 0px 0px;
+  height: 37vmin;
 
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
-
-  /* box-shadow: 0 -100px 100px -5px black;
-  -webkit-box-shadow: 0 -100px 100px -5px black;
-  -moz-box-shadow: 0 -100px 100px -5px black;
-  -o-box-shadow: 0 -100px 100px -5px black; */
 }
 
 elemento:after {
@@ -133,8 +96,7 @@ elemento:after {
     width: 24%;
     left: 38%;
     top: -1px;
-    /* border-top: 3px solid rgb(244, 211, 108); */
-    border-top: 3px solid;
+    border-top: 0.4vh solid;
     border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgb(244, 211, 108), rgba(0, 0, 0, 0));
     border-image-slice: 1;
 }
@@ -158,19 +120,29 @@ elemento:last-child:after {
   margin-left: 80px;
 }
 
+.margined-left {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 1vmax;
+    margin-left: 3.5vmax;
+    max-width: 30vmax
+}
+
+.margined-right {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 3.5vmax;
+    margin-left: 1vmax;
+    max-width: 30vmax
+}
+
 footer {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 10vh;
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  /* background: #0C0F13; */
-
-  /* box-shadow: 0 0 100px black;
-  -webkit-box-shadow: 0 0 100px black;
-  -moz-box-shadow: 0 0 100px black;
-  -o-box-shadow: 0 0 100px black; */
+  height: 10vmin;
+  margin-top: 9vmin;
+  margin-bottom: 5vmin;
 
   /* For text formatting. */
   display: flex;
@@ -186,8 +158,7 @@ footer:after {
   width: 24%;
   left: 38%;
   top: -1px;
-  /* border-top: 3px solid rgb(244, 211, 108); */
-  border-top: 3px solid;
+  border-top: 0.4vh solid;
   border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgb(244, 211, 108), rgba(0, 0, 0, 0));
   border-image-slice: 1;
 }
