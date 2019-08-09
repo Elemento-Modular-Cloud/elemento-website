@@ -22,6 +22,10 @@ body {
     /* Reserve space for header plus some extra space for sneak peeking. */
     scroll-padding-top: 0vh;
     overflow: scroll;
+
+    /* Just to prevent flickering on iphone safari */
+    -webkit-transform:translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
   }
 
 h2 {
