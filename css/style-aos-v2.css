@@ -219,8 +219,9 @@ footer {
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: 10vmin;
   margin-top: 9vmin;
-  margin-bottom: 5vmin;
+  margin-bottom: 2vmin;
   padding-top: 0.4vh;
+  overflow:hidden;
 
   /* For text formatting. */
   display: flex;
