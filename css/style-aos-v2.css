@@ -138,17 +138,27 @@ elemento:hover p {
 }
 
 elemento img{
-    transition: all 5s ease;
-    -webkit-transition: all 5s ease;
     -webkit-filter: grayscale(25%);
     filter: grayscale(25%);
+
+    -webkit-transition: 5s -webkit-filter linear;
+    -moz-transition: 5s -moz-filter linear;
+    -moz-transition: 5s filter linear;
+    -ms-transition: 5s -ms-filter linear;
+    -o-transition: 5s -o-filter linear;
+    transition: 5s filter linear, 5s -webkit-filter linear;    
 }
 
 elemento:hover img{
-    transition: all 5s ease;
-    -webkit-transition: all 5s ease;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+
+    -webkit-transition: 5s -webkit-filter linear;
+    -moz-transition: 5s -moz-filter linear;
+    -moz-transition: 5s filter linear;
+    -ms-transition: 5s -ms-filter linear;
+    -o-transition: 5s -o-filter linear;
+    transition: 5s filter linear, 5s -webkit-filter linear;    
 }
 
 /* elemento:hover img {
