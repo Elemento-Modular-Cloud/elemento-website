@@ -28,16 +28,25 @@ h2 {
   font-family: 'Muli', sans-serif;
   font-size: 2.1vmin;
   font-weight: bold;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: white;
 }
 
 h4 {
   font-family: 'Muli', sans-serif;
   font-size: 1.6vmin;
   font-weight: bold;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: white;
 }
 
 p {
   font-size: 1.7vmin;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: whitesmoke;
 }
 
 .page-background{
@@ -98,6 +107,7 @@ elemento {
   margin-top: 7vmin;
   padding: 7vmin 0px 0px 0px;
   height: 37vmin;
+  width: 100vw;
 
   display: flex;
   align-items: center;
@@ -107,6 +117,45 @@ elemento {
 
   scroll-snap-align: center;
 }
+
+
+elemento:hover h2 {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: rgb(244, 211, 108);
+}
+
+elemento:hover h4 {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: rgb(244, 211, 108);
+}
+
+elemento:hover p {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: rgb(255, 240, 195);
+}
+
+elemento img{
+    transition: all 5s ease;
+    -webkit-transition: all 5s ease;
+    -webkit-filter: grayscale(25%);
+    filter: grayscale(25%);
+}
+
+elemento:hover img{
+    transition: all 5s ease;
+    -webkit-transition: all 5s ease;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+/* elemento:hover img {
+    transition: all 1s ease;
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
+} */
 
 elemento:after {
     content: '';
@@ -160,7 +209,7 @@ footer {
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: 10vmin;
   margin-top: 9vmin;
-  margin-bottom: 3vmin;
+  margin-bottom: 5vmin;
   padding-top: 0.4vh;
 
   /* For text formatting. */
