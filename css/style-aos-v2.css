@@ -160,7 +160,8 @@ footer {
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: 10vmin;
   margin-top: 9vmin;
-  margin-bottom: 5vmin;
+  margin-bottom: 3vmin;
+  padding-top: 0.4vh;
 
   /* For text formatting. */
   display: flex;
@@ -168,6 +169,8 @@ footer {
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
+  /* background: rgba(255, 255, 255, 0.2); */
+  color: white;
 }
 
 footer:after {
