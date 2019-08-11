@@ -9,13 +9,14 @@
 
 <main>  
   <body class="page-background">
-    <section width="10%"" class="first-section" min-height="100vh">
+
+    <section width="10%"" class="first-section" min-height="100vh" id="logo">
       <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400" align="center">
         <img src="/img/logos/MarkDark.svg" height="70%" vertical-align="middle">
       </div>  
     </section>
 
-    <elemento data-aos="fade-up" data-aos-offset="-70" data-aos-delay="450">
+    <elemento data-aos="fade-up" data-aos-offset="-70" data-aos-delay="450" id="modular">
       <div class="margined-right" align="right" data-aos="fade-right" data-aos-offset="120" data-aos-delay="200">
         <h2>Modular</h2>
         <p>Elemento Modular Cloud solutions are made of simple functional modules called Elements.<br>
@@ -25,6 +26,7 @@
       <div class="margined-left">
         <img src="/img/icons/Modulare.svg" align="middle" data-aos="fade-left">
       </div>
+      <img src="/img/resources/orange-down-arrow.gif" class="border-icon"/>
     </elemento>
 
     <elemento data-aos="fade-up" data-aos="fade-up" data-aos-offset="70">
@@ -99,10 +101,25 @@
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <script>
-      AOS.init({
-        duration: 1000,
-      });
+    AOS.init({
+      duration: 1000,
+    });
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          var myElement = $('.border-icon');
+          $(window).on('scroll', function () {
+            var st = $(this).scrollTop()*.7;
+            myElement.css({
+                'opacity': 1 - st / 600
+            });
+          });
+        });
     </script>
   </body>
 </main>

@@ -158,6 +158,20 @@ elemento:after, footer:after {
     border-image-slice: 1;
 }
 
+.border-icon {
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:-5vmin;
+  opacity: 1;
+  height: 7vmin; 
+  width: 3.5%; 
+  z-index: 2;
+  top: 0;
+}
+
 elemento:last-child:after {
   border-top: none;
   
