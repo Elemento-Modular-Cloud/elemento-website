@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
 
 body {
-    margin:0;
-    padding:0;
-    /* font-family: 'Muli', sans-serif; */
+    // margin: auto;
+    // padding:0;
+    position: absolute;
+    width: 80vw;
+    left: 10vw;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 17px;
     color: white;
-
-    /* Reserve space for header plus some extra space for sneak peeking. */
-    // scroll-padding-top: 0vh;
-    // scroll-snap-type: y proximity;
-    scroll-snap-stop: always;
     
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+}
+
+mobile-page-wrapper {
+    width: 100vw;
+    overflow: auto;
+    overflow-x: hidden;
 }

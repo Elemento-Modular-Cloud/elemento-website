@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
 
 body {
-    margin:0;
-    padding:0;
+    // margin:0;
+    // padding:0;
+    // width: 100vw;
     /* font-family: 'Muli', sans-serif; */
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 17px;
@@ -14,5 +15,5 @@ body {
     scroll-snap-stop: always;
     
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
 }
