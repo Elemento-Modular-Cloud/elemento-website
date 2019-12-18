@@ -86,6 +86,8 @@ elemento {
   scroll-snap-type: y mandatory;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+
+  vertical-align: middle;
 }
 
 .scrollDiv{
@@ -121,10 +123,24 @@ elemento:hover p {
 }
 
 elemento img{
-  height: 30vw;
-  max-height: 30vh;
-  width: 30vw;
+  height: 40vw;
+  max-height: 40vh;
+  width: 40vw;
   overflow: hidden;
+}
+
+elementoimg{
+  width: 40%;
+  align-content: center;
+  align-items: center;
+  float: left;
+}
+
+elementotxt{
+  width: 40%;
+  align-content: left;
+  align-items: left;
+  float: left;
 }
 
 footer {
