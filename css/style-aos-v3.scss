@@ -81,6 +81,11 @@ elemento {
   position: relative;
 
   opacity: 0.;
+
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .scrollDiv{
