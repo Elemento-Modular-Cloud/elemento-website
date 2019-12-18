@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+
+html {
+    margin:0;
+    padding:0;
+    /* font-family: 'Muli', sans-serif; */
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 17px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Muli', sans-serif;
+    font-size: 2.1vmin;
+    font-weight: bold;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: white;
+}
+
+h4 {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.6vmin;
+    font-weight: bold;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: white;
+}
+
+p, a {
+    font-size: 1.7vmin;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: whitesmoke;
+    }
+
+    .page-background{
+    margin: 0;
+    background-image: linear-gradient(-90deg, #0C0F13 5%, black 40%, black 60%, #0C0F13 95%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.first-section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 99.5vh;
+
+    /* For text formatting. */
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+
+.scroller {
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid rgb(0,48,90);
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+    scroll-snap-align: center;
+    align-content: center;
+    align-items: center;
+    float: center;
+    vertical-align: middle;
+    padding: 1em;
+    height: 99.5vh;
+}
+
+picture{
+    float: left;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+text{
+    display: table-cell; 
+    vertical-align: middle;
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scrollDiv{
+    opacity: 0.5;
+}
+
+.scrollDiv.fade-in{
+    transition:opacity 300ms ease-in-out;
+    opacity:1;
+}
+.scrollDiv.fade-out{
+    transition:opacity 500ms ease-in-out;
+    opacity:0.5;
+}
