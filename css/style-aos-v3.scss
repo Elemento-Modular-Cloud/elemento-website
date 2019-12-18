@@ -57,32 +57,6 @@ p, a {
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
-
-  scroll-snap-align: center;
-}
-
-@-moz-document url-prefix() {
-  .first-section {
-    /* Needed for children to be absolutely positioned relative to the parent. */
-    position: relative;
-    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 92.5vmin;
-  
-    /* For text formatting. */
-    display: flex;
-    flex: 1 1 auto;
-    margin: 0 auto;
-    
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 0 0 5px #000;
-
-    background-image: url('/img/logos/MarkDark.svg');
-    background-repeat: no-repeat;
-    background-size: 50vmin;
-    background-position: center 50%;
-  }
 }
 
 elemento {
@@ -100,16 +74,13 @@ elemento {
 
   // background-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, black 20%, black 80%,  rgba(0,0,0,0) 100%);
 
-  scroll-snap-type: y mandatory;
-  -webkit-scroll-snap-type: y mandatory;
-  scroll-snap-align: center;
-  -webkit-scroll-snap-align: center;
-
   width: 100%;
   top: 0;
   height:99.6vh;
 
   position: relative;
+
+  opacity: 0.;
 }
 
 .scrollDiv{
@@ -122,7 +93,6 @@ elemento {
 }
 .scrollDiv.fade-out{
   transition:opacity 500ms ease-in-out;
-  // scroll-snap-align: none;
   opacity:0;
 }
 
