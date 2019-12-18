@@ -1,18 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@font-face {
+  font-family: 'herobold';
+  src: url('/fonts/hero-bold-webfont.woff2') format('woff2'),
+       url('/fonts/hero-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'herolight';
+  src: url('/fonts/hero-light-webfont.woff2') format('woff2'),
+       url('/fonts/hero-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'heroregular';
+  src: url('/fonts/hero-regular-webfont.woff2') format('woff2'),
+       url('/fonts/hero-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   margin:0;
   padding:0;
   /* font-family: 'Muli', sans-serif; */
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'herolight', sans-serif;
   font-size: 17px;
   color: white;
 }
 
 h2 {
-  font-family: 'Muli', sans-serif;
-  font-size: 2.1vmin;
+  font-family: 'herolight', sans-serif;
+  font-size: 2.1vmax;
   font-weight: bold;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -20,8 +43,8 @@ h2 {
 }
 
 h4 {
-  font-family: 'Muli', sans-serif;
-  font-size: 1.6vmin;
+  font-family: 'herolight', sans-serif;
+  font-size: 1.6vmax;
   font-weight: bold;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -29,7 +52,7 @@ h4 {
 }
 
 p, a {
-  font-size: 1.7vmin;
+  font-size: 1.7vmax;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   color: whitesmoke;
@@ -122,27 +145,6 @@ elemento:hover p {
     color: rgb(255, 240, 195);
 }
 
-elemento img{
-  height: 40vw;
-  max-height: 40vh;
-  width: 40vw;
-  overflow: hidden;
-}
-
-elementoimg{
-  width: 40%;
-  align-content: center;
-  align-items: center;
-  float: left;
-}
-
-elementotxt{
-  width: 40%;
-  align-content: left;
-  align-items: left;
-  float: left;
-}
-
 footer {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
@@ -202,29 +204,42 @@ elemento:last-child:after {
   background-position: center 30%;
 }
 
-.margined {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
+picture{
+  float: left;
+  width: 50%;
+  padding-left: 13%;
+  padding-right: 7%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
 }
 
-.margined-left {
-    height: 25%;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    margin-right: 1vmax;
-    margin-left: 3.5vmax;
-    max-width: 30vmax
+picture img{
+  height: 27vmax;
+  width: 27vmax;
+  overflow: hidden;
 }
 
-.margined-right {
-    height: 25%;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    margin-right: 3.5vmax;
-    margin-left: 1vmax;
-    max-width: 30vmax
+text{
+  display: table-cell; 
+  vertical-align: middle;
+  float: right;
+  width: 50%;
+  padding-left: 7%;
+  padding-right: 13%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
 }
 
 a:visited {
