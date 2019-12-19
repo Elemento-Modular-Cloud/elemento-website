@@ -31,6 +31,7 @@ html {
   font-family: 'herolight', sans-serif;
   font-size: 17px;
   color: white;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -110,11 +111,6 @@ elemento {
   position: relative;
 
   opacity: 0.;
-
-  scroll-snap-type: mandatory;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 
   vertical-align: middle;
 }
