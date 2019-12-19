@@ -225,6 +225,14 @@ elemento:last-child:after {
     transform: translate(-50%, 25vh);
   }
 
+  .reliable{
+    padding-right: 13vh;
+  }
+
+  .transparent{
+    padding-right: 9vh;
+  }
+
   .text{
     height: 100%;
     width: 40%;
@@ -247,16 +255,23 @@ elemento:last-child:after {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    aos: zoom-in;
   }
 
   .picture img{
     width: 50%;
-    max-height: 60%;
+    height: 50%;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(50%, -50%);
+  }
+
+  .reliable{
+    padding-right: 6.5%;
+  }
+
+  .transparent{
+    transform: translateX(6.5%)
   }
 
   .text{
