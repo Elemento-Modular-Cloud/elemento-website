@@ -75,7 +75,7 @@ p, a {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 99.5vh;
+  height: 100vh;
 
   /* For text formatting. */
   display: flex;
@@ -192,7 +192,7 @@ elemento:after, footer:after {
   right:0;
   margin-left:auto;
   margin-right:auto;
-  margin-top:-5vmin;
+  margin-top:95vmin;
   opacity: 1;
   height: 7vmin; 
   width: 3.5%; 
