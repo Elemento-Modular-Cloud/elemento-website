@@ -46,7 +46,7 @@ p, a {
     /* Needed for children to be absolutely positioned relative to the parent. */
     position: relative;
     /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 99.5vh;
+    height: 100vh;
 
     /* For text formatting. */
     display: flex;
@@ -62,7 +62,6 @@ p, a {
 .scroller {
     width: 100%;
     margin: 0 auto;
-    border: 2px solid rgb(0,48,90);
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -74,8 +73,7 @@ p, a {
     align-items: center;
     float: center;
     vertical-align: middle;
-    padding: 1em;
-    height: 99.5vh;
+    height: 100vh;
 }
 
 picture{
