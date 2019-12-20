@@ -6,6 +6,7 @@
        url('/fonts/hero-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
        url('/fonts/hero-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -22,6 +24,7 @@
        url('/fonts/hero-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 html {
@@ -36,7 +39,7 @@ html {
 
 h2 {
   font-family: 'heroregular', sans-serif;
-  font-size: 2.8vmin;
+  font-size: 2.8vh;
   font-weight: bold;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -46,7 +49,7 @@ h2 {
 
 h4 {
   font-family: 'heroregular', sans-serif;
-  font-size: 2vmin;
+  font-size: 2vh;
   font-weight: bold;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
@@ -55,7 +58,7 @@ h4 {
 
 p, a {
   font-family: 'Muli', sans-serif;
-  font-size: 1.6vmin;
+  font-size: 1.6vh;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   color: rgb(210, 210, 210);
