@@ -281,6 +281,15 @@ elemento:last-child:after {
   }
 }
 
+@keyframes fade-out {
+  from {
+    opacity: 1; 
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @media screen and (orientation:landscape) {
   @-webkit-keyframes from-right {
     0% { left: 90%; }
@@ -315,18 +324,28 @@ elemento:last-child:after {
     opacity: 0.;
   }
 
-  .picture .animate{
-    opacity: 0.;
-    -webkit-animation: from-right 2s forwards;
-    animation: fade-in 1s ease-in-out, from-right 2s ease-in-out forwards;
+  .picture .animate-in{
+    -webkit-animation: fade-in 1s ease-out, from-right 2s ease-out forwards;
+    animation: fade-in 1s ease-out, from-right 2s ease-out forwards;
+  }
+
+  .picture .animate-out{
+    -webkit-animation: fade-out 1s ease-out;
+    animation: fade-out 1s ease-out;
   }
 
   .picture img{
     height: 50vh;
     position: absolute;
+    left: -100%;
+    transform: translate(-50%, 25vh);
+  }
+
+  .picture img .animate{
+    height: 50vh;
+    position: absolute;
     left: 90%;
     transform: translate(-50%, 25vh);
-    opacity: 0.;
   }
 
   .text{
@@ -338,8 +357,8 @@ elemento:last-child:after {
 
   .text .animate{
     width: 100%;
-    -webkit-animation: from-left 2s forwards;
-    animation: fade-in 1s ease-in-out, from-left 2s ease-in-out forwards;
+    -webkit-animation: fade-in 1s ease-out, from-left 2s ease-out forwards;
+    animation: fade-in 1s ease-out, from-left 2s ease-out forwards;
   }
 
   .text-span{

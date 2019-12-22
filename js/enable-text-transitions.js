@@ -5,9 +5,9 @@ $(window).on("scroll", function(){
     var el = $(this);
     var offsetTop = el.offset().top;
     if(scrollTop < offsetTop){    
-      el.removeClass("animate");
+      el.removeClass("animate-in");
     } else {
-      el.addClass("animate");
+      el.addClass("animate-in");
     }
   });
 });
