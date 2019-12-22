@@ -129,7 +129,7 @@ html {
   padding-left: 2.5vmin; 
   max-height: 65%; 
   overflow-y: visible;
-  opacity: 1.;
+  opacity: 0.;
   animation: zoom-fade 2.0s ease-in-out forwards;
 }
 
@@ -140,7 +140,7 @@ html {
   }
   to {
     opacity: 1;
-    transform: scale(1.4);
+    transform: scale(1.2);
   }
 }
 
