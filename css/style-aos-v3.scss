@@ -27,6 +27,16 @@
   font-display: swap;
 }
 
+:root{
+  --darker-grey: #0C0F13;
+  // --dark-grey:;
+  // --light-grey:;
+  --pale-grey: rgb(210, 210, 210);
+  --pale-accent: rgb(255, 246, 228);
+  --dark-accent: rgb(233, 164, 39);
+  --light-accent: rgb(244, 211, 108);
+}
+
 html {
   margin:0;
   padding:0;
@@ -61,7 +71,7 @@ html {
     font-size: 1.6vh;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: rgb(210, 210, 210);
+    color: var(--pale-grey);
   }
 }
 
@@ -90,17 +100,17 @@ html {
     font-size: 1.1vh;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: rgb(210, 210, 210);
+    color: var(--pale-grey);
   }
 }
 
 .orangetext {
-  color: rgb(233, 164, 39);
+  color: var(--dark-accent);
 }
 
 .page-background{
   margin: 0;
-  background-image: linear-gradient(-90deg, #0C0F13 5%, black 40%, black 60%, #0C0F13 95%);
+  background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -186,19 +196,19 @@ elemento {
 elemento:hover h2 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: rgb(233, 164, 39);
+    color: var(--dark-accent);
 }
 
 elemento:hover h4 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: rgb(244, 211, 108);
+    color: var(--light-accent);
 }
 
 // elemento:hover p {
 //     transition: all 1s ease;
 //     -webkit-transition: all 1s ease;
-//     color: rgb(210, 210, 210);
+//     color: var(--pale-grey);
 // }
 
 footer {
@@ -213,7 +223,7 @@ footer {
 
   font-family: 'herolight', sans-serif;
 
-  // background-image: linear-gradient(-90deg, #0C0F13 5%, black 40%, black 60%, #0C0F13 95%);
+  // background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
 
   /* For text formatting. */
   display: flex;
@@ -232,7 +242,7 @@ elemento:after, footer:after {
     left: 38%;
     top: -0.4vh;
     border-top: 0.4vh solid;
-    border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgb(244, 211, 108), rgba(0, 0, 0, 0));
+    border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
     border-image-slice: 1;
 }
 
@@ -345,16 +355,16 @@ elemento:last-child:after {
 }
 
 a:visited {
-  color: rgb(233, 164, 39);
+  color: var(--dark-accent);
 }
 a:link {
-  color: rgb(233, 164, 39);
+  color: var(--dark-accent);
 }
 a:active {
-  color: rgb(255, 246, 228);
+  color: var(--pale-accent);
 }
 a:hover {
-  color: rgb(244, 211, 108);
+  color: var(--light-accent);
 }
 
 .e-mail:before {
