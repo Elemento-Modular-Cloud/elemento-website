@@ -1,5 +1,5 @@
 $(document).ready(function() {
-var myElement = $('.border-icon');
+var myElement = $('.arrow-container');
 var stars = $('.stars');
 $(window).on('scroll', function () {
         var st = $(this).scrollTop();

@@ -247,17 +247,44 @@ elemento:after, footer:after {
     border-image-slice: 1;
 }
 
-.border-icon {
-  position:absolute;
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:95vh;
-  opacity: 1;
-  height: 5vh;
-  z-index: 2;
-  top: 0;
+.arrow-container {
+  position: absolute;
+  display: inline-block;
+  // background-color: #0e242d;
+  height: 1.7vh;
+  width: 1.7vh;
+  top: calc(100vh - 2 * 1.7vh);
+  align-items: center;
+  justify-content: center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.arrow {
+  box-sizing: border-box;
+  height: 1.7vh;
+  width: 1.7vh;
+  border-style: solid;
+  border-color: var(--light-accent);
+  border-width: 0px 2px 2px 0px;
+  transform: rotate(45deg);
+  transition: border-width 500ms ease-in-out;
+  // transform-origin: bottom;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.bounce-arrow {
+  animation-name: bounce-arrow;
+  animation-timing-function: ease-in-out;
+}
+@keyframes bounce-arrow {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-25%); }
+  100% { transform: translateY(0); }
 }
 
 elemento:last-child:after {
