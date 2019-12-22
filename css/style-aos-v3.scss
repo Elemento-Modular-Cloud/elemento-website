@@ -272,9 +272,39 @@ elemento:last-child:after {
   background-position: center 30%;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (orientation:landscape) {
+  @-webkit-keyframes from-right {
+    0% { left: 90%; }
+    100% { left: 100%; }
+  }
+
+  @keyframes from-right {
+    0% { left: 90%; }
+    100% { left: 100%; }
+  }
+
+  @-webkit-keyframes from-left {
+    0% { left: 10%; }
+    100% { left: 0; }
+  }
+
+  @keyframes from-left {
+    0% { left: 10%; }
+    100% { left: 0; }
+  }
+
   .picture{
     float: left;
+    left: -25%;
     width: 50%;
     padding: auto;
     text-align: center;
@@ -282,21 +312,21 @@ elemento:last-child:after {
     margin-right: auto;
     display: table-cell;
     position: relative;
+    opacity: 0.;
+  }
+
+  .picture .animate{
+    opacity: 0.;
+    -webkit-animation: from-right 2s forwards;
+    animation: fade-in 1s ease-in-out, from-right 2s ease-in-out forwards;
   }
 
   .picture img{
     height: 50vh;
     position: absolute;
-    left: 50%;
+    left: 90%;
     transform: translate(-50%, 25vh);
-  }
-
-  .reliable{
-    padding-right: 13vh;
-  }
-
-  .transparent{
-    padding-right: 9vh;
+    opacity: 0.;
   }
 
   .text{
@@ -304,6 +334,12 @@ elemento:last-child:after {
     width: 40%;
     position: relative;
     left: 50%;
+  }
+
+  .text .animate{
+    width: 100%;
+    -webkit-animation: from-left 2s forwards;
+    animation: fade-in 1s ease-in-out, from-left 2s ease-in-out forwards;
   }
 
   .text-span{
@@ -331,14 +367,7 @@ elemento:last-child:after {
     top: 50%;
     left: -50%;
     transform: translate(50%, -50%);
-  }
-
-  .reliable{
-    padding-right: 9%;
-  }
-
-  .transparent{
-    padding-left: 5%;
+    animation: fade-in 2.0s ease-in-out forwards;
   }
 
   .text{
@@ -353,6 +382,7 @@ elemento:last-child:after {
     top: 0;
     transform: translateY(50%);
     text-align: center;
+    animation: fade-in 2.0s ease-in-out forwards;
 }
 
 a:visited {
