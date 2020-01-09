@@ -27,17 +27,6 @@
   font-display: swap;
 }
 
-:root{
-  --darker-grey: #0C0F13;
-  // --dark-grey:;
-  // --light-grey:;
-  --pale-grey: rgb(210, 210, 210);
-  --pale-accent: rgb(255, 246, 228);
-  --dark-accent: rgb(233, 164, 39);
-  --light-accent: rgb(244, 211, 108);
-  --font-scale: 1.5;
-}
-
 html {
   margin:0;
   padding:0;
@@ -137,7 +126,6 @@ html {
   width: 50vmin;
   vertical-align: middle;
   text-align: center;
-  padding-left: 2.5vmin; 
   max-height: 65%; 
   overflow-y: visible;
   opacity: 0.;
@@ -197,7 +185,7 @@ elemento {
 elemento:hover h2 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: var(--dark-accent);
+    color: var(--light-accent);
 }
 
 elemento:hover h4 {
