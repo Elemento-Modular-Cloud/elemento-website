@@ -39,7 +39,7 @@ html {
 @media screen and (orientation:landscape) {
   h2 {
     font-family: 'heroregular', sans-serif;
-    font-size: calc(2.8vh * var(--font-scale));
+    font-size: calc(2.3vh * var(--font-scale));
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -49,7 +49,7 @@ html {
 
   h4 {
     font-family: 'heroregular', sans-serif;
-    font-size: calc(2vh * var(--font-scale));
+    font-size: calc(1.8vh * var(--font-scale));
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -204,7 +204,7 @@ footer {
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: auto;
-  margin-top: -9vmin;
+  margin-top: 20vmin;
   margin-bottom: 2vmin;
   // padding-top: 5vh;
   overflow:hidden;
@@ -217,21 +217,31 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
+  // text-shadow: 0 0 5px #000;
   /* background: rgba(255, 255, 255, 0.2); */
   color: white;
 }
 
-elemento:after, footer:after {
+elemento:after {
     content: '';
     position: absolute;
     width: 24%;
     left: 38%;
     top: -0.4vh;
-    border-top: 0.4vh solid;
+    border-top: 0.2vh solid;
     border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
     border-image-slice: 1;
+}
+
+footer:after {
+  content: '';
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: -0.4vh;
+  border-top: 0.6vh solid;
+  border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
+  border-image-slice: 1;
 }
 
 .arrow-container {
@@ -353,6 +363,7 @@ elemento:last-child:after {
     top: 0;
     transform: translateY(50%);
     text-align: center;
+  }
 }
 
 a:visited {
