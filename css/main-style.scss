@@ -123,10 +123,9 @@ html {
 }
 
 .first-section > img:nth-of-type(1){
-  width: 50vmin;
   vertical-align: middle;
   text-align: center;
-  max-height: 65%; 
+  height: 65%; 
   overflow-y: visible;
   opacity: 0.;
   animation: zoom-fade 2.0s ease-in-out forwards;
