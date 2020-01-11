@@ -31,12 +31,12 @@ body{
   transform: translate(-50%, -50%);
   font-size: 40px;
   font-family:'herolight', sans-serif;
-  color: var(--dark-accent);
+  color: var(--menu-accent);
   background: transparent;
   cursor: pointer;
 }
-.menu::before,
-.menu::after {
+.menu:before,
+.menu:after {
   position: absolute;
   transition: 0.4s ease;
   opacity: 0;
@@ -55,8 +55,8 @@ body{
   left: 12%;
   z-index: 3;
 }
-.menu:hover::before,
-.menu:hover::after {
+.menu:hover:before,
+.menu:hover:after {
   top: -4.3px;
   opacity: 1;
   transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
@@ -75,7 +75,7 @@ body{
 .bar {
   width: 27px;
   height: 2px;
-  background: var(--dark-accent);
+  background: var(--menu-accent);
   border-radius: 30px;
   margin: 0 auto 9.5px;
   margin-top: 5px;
