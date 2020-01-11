@@ -25,10 +25,12 @@
   <script async src="/js/fade-border.min.js"></script>
   <script async src="/js/fade-elements.min.js"></script>
   <script async src="/js/fade-stars.min.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
 
   </head>
 
   <body class="page-background">  
+    <div w3-include-html="/topmenu.html"></div>  
     <div class="stars" id="stars"></div>
     <div class="stars" id="stars2"></div>
     <div class="stars" id="stars3"></div>
@@ -65,12 +67,15 @@
       </div>
     </elemento>
 
-    <iframe src="/footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    <div w3-include-html="/footer.html"></div>
 
     <script>
     AOS.init({
       duration: 1000,
     });
     </script>
-  </body>
+
+    <script>
+      w3IncludeHTML();
+    </script>  </body>
 </html>
