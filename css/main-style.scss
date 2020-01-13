@@ -204,6 +204,7 @@ footer {
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: auto;
+  width: 100%;
   padding-top: 5vh;
   padding-bottom: 3vh;
   overflow:hidden;
@@ -213,9 +214,14 @@ footer {
   // background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
 
   /* For text formatting. */
-  display: block;
+  display: flex;
+  top: 0;
+  left: 0;
+  // transform: translateX(50%);
   align-items: center;
   justify-content: center;
+  text-align: center;
+
   // text-shadow: 0 0 5px #000;
   /* background: rgba(255, 255, 255, 0.2); */
   color: white;
