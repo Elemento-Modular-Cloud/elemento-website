@@ -1,7 +1,16 @@
 @font-face {
-  font-family: 'herolight';
+  font-family: 'herolights';
   src: url('/fonts/hero-light-webfont.woff2') format('woff2'),
        url('/fonts/hero-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'heroregular';
+  src: url('/fonts/hero-regular-webfont.woff2') format('woff2'),
+       url('/fonts/hero-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,11 +38,7 @@ body{
   top: 0;
   left: -0.3vw;
   margin-left: 0%;
-  z-index: 2;
-}
-
-.close_menu_button{
-  cursor: pointer;
+  z-index: 11;
 }
 
 .menu {
@@ -108,9 +113,8 @@ body{
   height: 100%;
   width: 100%;
   background-color: black;
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
-  transform: opacity(0);
   transition: all 0.75s;
 }
 
@@ -120,13 +124,13 @@ body{
 
 .fullpage_menu li, .fullpage_menu a {
   font-family: 'herolight', sans-serif;
-  font-size: calc(1.4vh * var(--font-scale));
+  font-size: calc(1.7vh * var(--font-scale));
   color: var(--pale-grey);
   text-transform: uppercase;
 }
 
 .fullpage_menu li{
-  line-height: calc(1.4vh * var(--font-scale) + 4vh);
+  line-height: calc(1.7vh * var(--font-scale) + 4vh);
 }
 
 .fullpage_menu ol li ol{
@@ -140,7 +144,6 @@ body{
 }
 
 .fullpage_menu a:hover {
-  font-family: 'herolight', sans-serif;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   background-color: var(--menu-accent);
@@ -162,11 +165,32 @@ body{
   top: 0;
   left: 0;
   opacity: 1;
-  transition: opacity 500 ease-in-out;
+  z-index: 10;
+  transition: opacity 0.75s ease-in-out;
   // transform: opacity(1);
 }
 
 .menu_content > ul:first-of-type {
   width: 100%; 
   list-style-type:none;
+}
+
+
+.close_menu_button{
+  cursor: pointer;
+}
+
+
+.close_menu_button > li > a {
+  font-family: 'herolight', sans-serif;
+  display: block;
+  text-decoration: none;
+  color: red;
+}
+
+.close_menu_button > li > a:hover {
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  background-color: red;
+  color: var(--darker-grey)
 }
