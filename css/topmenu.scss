@@ -82,7 +82,6 @@
 .menu.enable_hover:hover:after {
   top: -4.3px;
   opacity: 1;
-  transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
 }
 
 .bar_container {
@@ -107,8 +106,7 @@
 }
 
 .hoverbar{
-  width: calc(24px * 1.41);
-  margin-top: 0;
+  width: 33.8px;
   transition: transform 0.3s ease;
 }
 
@@ -136,7 +134,7 @@
   width: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 1s ease-in-out, z-index 1.1s;
+  transition: opacity .5s ease-in-out, z-index .51s;
 }
 
 .visible_menu {
