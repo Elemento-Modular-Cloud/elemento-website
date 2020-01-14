@@ -45,33 +45,41 @@
   left: 100px;
   transform: translate(-50%, -50%);
   font-size: 40px;
+  opacity: 1;
   font-family:'herolight', sans-serif;
   color: var(--menu-accent);
   background: transparent;
   cursor: pointer;
 }
+
 .menu:before,
 .menu:after {
   position: absolute;
   transition: 0.4s ease;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(-5px);
 }
+
 .menu:before {
   content: "M \00a0 \00a0 \00a0 \00a0 U";
   top: -60px;
   left: -100%;
   width: 215px;
-  z-index: 3;
+  z-index: 1;
 }
+
 .menu:after {
   content: "N";
   top: 50px;
   left: 12%;
-  z-index: 3;
+  z-index: 1;
 }
-.menu:hover:before,
-.menu:hover:after {
+
+.menu .enable_hover{}
+
+.menu.enable_hover:hover:before,
+.menu.enable_hover:hover:after {
   top: -4.3px;
   opacity: 1;
   transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
@@ -95,17 +103,17 @@
   margin-bottom: 9.5px;
   margin-left: 0px;
   transform-origin: center center;
-  transform: translateY(5px);
-  transition: transform 0.4s ease;
+  transform: none;
 }
 
 .hoverbar{
   width: calc(24px * 1.41);
   margin-top: 0;
+  transition: transform 0.3s ease;
 }
 
 .hoverbar:nth-child(1) {
-  transform: translateY(16px)  translateX(-3px) rotate(45deg);
+  transform: translateY(11px) translateX(-3px) rotate(45deg);
 }
 
 .hoverbar:nth-child(2) {
@@ -113,7 +121,7 @@
 }
 
 .hoverbar:nth-child(3) {
-  transform: translateY(-7px) translateX(-3px)  rotate(-45deg);
+  transform: translateY(-11px) translateX(-3px)  rotate(-45deg);
 }
 
 .fullpage_menu {
@@ -123,7 +131,7 @@
   left: 0;
   overflow: hidden;
   position: fixed;
-  background-color: #0C0F13EE;
+  background-color: #0C0F13D9;
   height: 100%;
   width: 100%;
   z-index: -1;
