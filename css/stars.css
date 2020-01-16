@@ -1,6 +1,7 @@
 .stars {
     position: fixed;
-    opacity: 1.
+    margin: 0;
+    opacity: 1.;
 }
 
 #stars {
