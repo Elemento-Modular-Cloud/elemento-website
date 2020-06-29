@@ -1,16 +1,17 @@
 <html>
   <head>
     <title>ELEMENTO Modular Cloud</title>
-    <link async rel="shortcut icon" type="image/x-icon" href="LogoDark.ico">
-    <link async rel="apple-touch-icon" href="LogoDark.ico">
+    <link async rel="shortcut icon" type="image/x-icon" href="/LogoDark.ico">
+    <link async rel="apple-touch-icon" href="/LogoDark.ico">
 
     <link media="not all and (pointer:coarse)" rel="stylesheet" type="text/css" href="/css/body-standard.scss"/>
     <link media="(pointer:coarse)" rel="stylesheet" type="text/css" href="/css/body-mobile.scss"/>
     <link rel="stylesheet" type="text/css" href="css/computing-page-colors.scss"/>
     <link rel="stylesheet" type="text/css" href="/css/main-style.scss"/>
     <link rel="stylesheet" type="text/css" href="css/pages-style.scss"/>
-    <link rel="stylesheet" type="text/css" href="/css/stars.css"/>
     <link rel="stylesheet" type="text/css" href="/css/topmenu.scss"/>
+    <link rel="stylesheet" type="text/css" href="/css/starfield.scss"/>
+    <link rel="stylesheet" type="text/css" href="/css/waves.scss"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153798322-1"></script>
@@ -31,7 +32,11 @@
   </head>
 
   <body class="page-background">
-    <div w3-include-html="/stars.html"></div>
+    <div id="starfield"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    
     <div w3-include-html="/topmenu.html"></div>  
 
     <link async rel="stylesheet" href="/css/aos.css"/>
@@ -148,5 +153,8 @@
 
     <script>
       w3IncludeHTML();
-    </script>  </body>
+    </script>  
+  </body>
+
+  <script src="/js/starfield.js"></script>
 </html>

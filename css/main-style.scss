@@ -28,14 +28,15 @@
 }
 
 html {
-  margin:0;
-  padding:0;
+  // margin:0;
+  // padding:0;
   /* font-family: 'Muli', sans-serif; */
   font-family: 'herolight', sans-serif;
   font-size: 17px;
-  color: white;
+  color: var(--pale-grey);
   overflow-x: hidden;
 }
+
 @media screen and (orientation:landscape) {
   h2 {
     font-family: 'heroregular', sans-serif;
@@ -43,7 +44,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
     text-transform: uppercase;
   }
 
@@ -53,7 +54,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
   }
 
   p, a {
@@ -72,7 +73,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
     text-transform: uppercase;
   }
 
@@ -82,7 +83,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
   }
 
   p, a {
@@ -115,6 +116,7 @@ html {
   display: flex;
   flex: 1 1 auto;
   margin: 0 auto;
+  z-index: 5;
   
   align-items: center;
   justify-content: center;
@@ -143,6 +145,12 @@ html {
   }
 }
 
+.elementocontainer {
+  height: fit-content;
+  width: 100vw;
+  background-color: white;
+}
+
 elemento {
   // position: relative;
   // margin-top: -0.4vh;
@@ -153,10 +161,9 @@ elemento {
   display: block;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
-
-  // background-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, black 20%, black 80%,  rgba(0,0,0,0) 100%);
+  color: var(--pale-grey);
+  text-shadow: 0 0 5px var(--pale-accent);
+  background-color: white;
 
   width: 100%;
   top: 0;
@@ -165,7 +172,7 @@ elemento {
 
   position: relative;
 
-  opacity: 0.;
+  opacity: 1.;
 }
 
 .scrollDiv{
@@ -181,24 +188,34 @@ elemento {
   opacity:0;
 }
 
-
 elemento:hover h2 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: var(--light-accent);
+    color: var(--dark-accent);
 }
 
 elemento:hover h4 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: var(--light-accent);
+    color: var(--dark-accent);
 }
 
-// elemento:hover p {
-//     transition: all 1s ease;
-//     -webkit-transition: all 1s ease;
-//     color: var(--pale-grey);
-// }
+elemento:hover p {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: var(--darker-grey);
+}
+
+elemento:after {
+  content: '';
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: -0.4vh;
+  border-top: 0.2vh solid;
+  border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
+  border-image-slice: 1;
+}
 
 footer {
   /* Needed for children to be absolutely positioned relative to the parent. */
@@ -206,13 +223,15 @@ footer {
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: auto;
   width: 100%;
-  padding-top: 5vh;
+  padding-top: 7vh;
   padding-bottom: 3vh;
   overflow:hidden;
 
   font-family: 'herolight', sans-serif;
+  font-size: small;
 
   // background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
+  background-color: ;
 
   /* For text formatting. */
   display: flex;
@@ -228,15 +247,8 @@ footer {
   color: white;
 }
 
-elemento:after {
-    content: '';
-    position: absolute;
-    width: 24%;
-    left: 38%;
-    top: -0.4vh;
-    border-top: 0.2vh solid;
-    border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
-    border-image-slice: 1;
+footer p {
+  color: white;
 }
 
 footer:after {
@@ -246,7 +258,7 @@ footer:after {
   left: 38%;
   top: -0.4vh;
   border-top: 0.6vh solid;
-  border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
+  border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
   border-image-slice: 1;
 }
 
@@ -268,7 +280,7 @@ footer:after {
   height: 1.7vh;
   width: 1.7vh;
   border-style: solid;
-  border-color: var(--light-accent);
+  border-color: var(--darker-grey);
   border-width: 0px 2px 2px 0px;
   transform: rotate(45deg);
   transition: border-width 500ms ease-in-out;
@@ -283,6 +295,7 @@ footer:after {
 .bounce-arrow {
   animation-name: bounce-arrow;
   animation-timing-function: ease-in-out;
+  z-index: 10;
 }
 @keyframes bounce-arrow {
   0%   { transform: translateY(0); }
