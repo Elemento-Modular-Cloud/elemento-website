@@ -1,5 +1,11 @@
 (function () {
-var starFieldWidth = window.screen.width;
+var starFieldWidth = screen.width;
+
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    starFieldWidth = document.documentElement.clientWidth;
+}
+
 var starFieldHeight = window.innerHeight;
 var starNumber = starFieldWidth * starFieldHeight /100000 * 20;
 
