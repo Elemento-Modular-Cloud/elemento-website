@@ -7,7 +7,7 @@ if (isMobile) {
 }
 
 var starFieldHeight = window.innerHeight;
-var starNumber = starFieldWidth * starFieldHeight /100000 * 20;
+var starNumber = starFieldWidth * starFieldHeight /100000 * 15;
 
 addStars(starFieldWidth, starFieldHeight, starNumber);
 animateStars(starFieldWidth, 2.5);
@@ -67,26 +67,18 @@ var numberOfStars = noOfStars;
 }
 
 function animateStars(starFieldWidth, speedFactor) {
-var starField = document.getElementById('starfield');
-var stars = starField.childNodes;
+    var starField = document.getElementById('starfield');
+    var stars = starField.childNodes;
 
-var vw = window.innerWidth+"px";
+    var vw = window.innerWidth+"px";
 
-setInterval(function() {
-    for (var i = 1; i < stars.length; i++) {
-        if(stars[i].style.right <= vw){
-            var currentTop = parseInt(stars[i].style.top, 10);
-            var topChangeAmount = (1 - parseFloat(getStarRelativeSpeed(i))) * parseFloat(speedFactor);
-            var topDiff;
-            if (currentTop + topChangeAmount > window.innerHeight) {
-                topDiff = 0;
+    setInterval(function() {
+        for (var i = 1; i < stars.length; i++) {
+            if(stars[i].style.right <= vw){
+                var currentTop = parseInt(stars[i].style.top, 10);
+                var topChangeAmount = (1 - parseFloat(getStarRelativeSpeed(i))) * parseFloat(speedFactor);
+                stars[i].style.top = ((currentTop + topChangeAmount) % window.innerHeight) + 'px';
             }
-            else {
-                topDiff = currentTop + topChangeAmount;
-            }
-            stars[i].style.top = (topDiff) + 'px';
         }
-    }
-}, 70);
-
+    }, 70);
 }  

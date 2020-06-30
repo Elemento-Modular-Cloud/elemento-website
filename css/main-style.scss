@@ -158,7 +158,9 @@ html {
 
 .elementocontainer {
   height: fit-content;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   background-color: white;
 }
 
@@ -184,8 +186,8 @@ elemento {
 
   width: 100%;
   top: 0;
-  height:99.6vh;
-  max-height: 99.6vh;
+  height:80vh;
+  max-height: 80vh;
 
   position: relative;
 
@@ -205,33 +207,61 @@ elemento {
   opacity:0;
 }
 
-elemento:hover h2 {
+elemento h2 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     color: var(--dark-accent);
 }
 
-elemento:hover h4 {
+elemento h4 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     color: var(--dark-accent);
 }
 
-elemento:hover p {
+elemento p {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     color: var(--darker-grey);
 }
 
-elemento:after {
-  content: '';
-  position: absolute;
-  width: 24%;
-  left: 38%;
-  top: -0.4vh;
-  border-top: 0.2vh solid;
-  border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
-  border-image-slice: 1;
+.fulltext {
+  display: block;
+  width: 80vw;
+  margin-left: 10vw;
+  height: fit-content;
+  text-align: center;
+  color: var(--darker-grey);
+  white-space: pre-line;
+  font-size: calc(1.4vh * var(--font-scale));
+}
+
+.fulltext question {
+  font-family: 'heroregular';
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: var(--darker-grey);
+}
+
+.fulltext answer {
+  font-family: 'herobold';
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: var(--dark-accent);
+}
+
+.fulltext emphasis {
+  font-family: 'heroregular';
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: var(--dark-accent);
+  font-size: calc(2vh * var(--font-scale));
+}
+
+.fulltext p {
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  color: var(--darker-grey);
 }
 
 footer {
@@ -263,13 +293,13 @@ footer p {
   color: var(--darker-grey);
 }
 
-footer:after {
+.fulltext:after, footer:after, elemento:after {
   content: '';
   position: absolute;
   width: 24%;
   left: 38%;
   top: -0.4vh;
-  border-top: 0.6vh solid;
+  border-top: 4px solid;
   border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
   border-image-slice: 1;
 }
