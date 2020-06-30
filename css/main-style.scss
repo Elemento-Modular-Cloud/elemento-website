@@ -30,6 +30,12 @@
 body {
   width: 100vw;
   left: 0;
+  transform-style: preserve-3d;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 html {
@@ -169,6 +175,12 @@ elemento {
   color: var(--pale-grey);
   text-shadow: 0 0 5px var(--pale-accent);
   background-color: white;
+  transform-style: preserve-3d;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 
   width: 100%;
   top: 0;
