@@ -235,25 +235,20 @@ footer {
   font-family: 'herolight', sans-serif;
   font-size: small;
 
-  // background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
-  background-color: ;
+  background-color: var(--lighter-accent);
+  z-index: -1;
 
   /* For text formatting. */
   display: flex;
   top: 0;
   left: 0;
-  // transform: translateX(50%);
   align-items: center;
   justify-content: center;
   text-align: center;
-
-  // text-shadow: 0 0 5px #000;
-  /* background: rgba(255, 255, 255, 0.2); */
-  color: white;
 }
 
 footer p {
-  color: white;
+  color: var(--darker-grey);
 }
 
 footer:after {
