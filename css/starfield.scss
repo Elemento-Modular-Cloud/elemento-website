@@ -1,0 +1,46 @@
+starfield {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.star.far {
+  width: 1px;
+  height: 1px;
+}
+
+.star.near {
+  width: 4px;
+  height: 4px;
+}
+
+.star.white {
+  background: var(--lighter-accent);
+  // box-shadow: 0 0 15px #fff;
+}
+
+.star.yellow {
+  background: rgb(233, 164, 39);
+  // box-shadow: 0 0 15px #BFBB40;
+}
+
+.star.blue {
+  background: var(--light-accent);
+  // box-shadow: 0 0 15px #4444ff;
+}
+
+.star.red {
+  background: var(--dark-accent);
+  // box-shadow: 0 0 15px #ff4444;
+}

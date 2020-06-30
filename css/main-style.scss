@@ -27,44 +27,39 @@
   font-display: swap;
 }
 
-:root{
-  --darker-grey: #0C0F13;
-  // --dark-grey:;
-  // --light-grey:;
-  --pale-grey: rgb(210, 210, 210);
-  --pale-accent: rgb(255, 246, 228);
-  --dark-accent: rgb(233, 164, 39);
-  --light-accent: rgb(244, 211, 108);
-  --font-scale: 1.5;
+body {
+  width: 100vw;
+  left: 0;
 }
 
 html {
-  margin:0;
-  padding:0;
+  // margin:0;
+  // padding:0;
   /* font-family: 'Muli', sans-serif; */
   font-family: 'herolight', sans-serif;
   font-size: 17px;
-  color: white;
+  color: var(--pale-grey);
   overflow-x: hidden;
 }
+
 @media screen and (orientation:landscape) {
   h2 {
     font-family: 'heroregular', sans-serif;
-    font-size: calc(2.8vh * var(--font-scale));
+    font-size: calc(2.3vh * var(--font-scale));
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
     text-transform: uppercase;
   }
 
   h4 {
     font-family: 'heroregular', sans-serif;
-    font-size: calc(2vh * var(--font-scale));
+    font-size: calc(1.8vh * var(--font-scale));
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
   }
 
   p, a {
@@ -83,7 +78,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
     text-transform: uppercase;
   }
 
@@ -93,7 +88,7 @@ html {
     font-weight: bold;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: white;
+    color: var(--pale-grey);
   }
 
   p, a {
@@ -126,6 +121,7 @@ html {
   display: flex;
   flex: 1 1 auto;
   margin: 0 auto;
+  z-index: 5;
   
   align-items: center;
   justify-content: center;
@@ -134,25 +130,30 @@ html {
 }
 
 .first-section > img:nth-of-type(1){
-  width: 50vmin;
   vertical-align: middle;
   text-align: center;
-  padding-left: 2.5vmin; 
-  max-height: 65%; 
+  height: 65vh;
+  max-height: 65vh;
   overflow-y: visible;
   opacity: 0.;
   animation: zoom-fade 2.0s ease-in-out forwards;
 }
 
 @keyframes zoom-fade {
-  from {
-    opacity: 0; 
+  0% {
+    filter: brightness(0%) drop-shadow(0px 0px 20px black);
     transform: scale(1);
   }
-  to {
-    opacity: 1;
+  100% {
+    filter: brightness(100%) drop-shadow(0px 0px 20px black);
     transform: scale(1.2);
   }
+}
+
+.elementocontainer {
+  height: fit-content;
+  width: 100vw;
+  background-color: white;
 }
 
 elemento {
@@ -165,10 +166,9 @@ elemento {
   display: block;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
-
-  // background-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, black 20%, black 80%,  rgba(0,0,0,0) 100%);
+  color: var(--pale-grey);
+  text-shadow: 0 0 5px var(--pale-accent);
+  background-color: white;
 
   width: 100%;
   top: 0;
@@ -177,7 +177,7 @@ elemento {
 
   position: relative;
 
-  opacity: 0.;
+  opacity: 1.;
 }
 
 .scrollDiv{
@@ -193,7 +193,6 @@ elemento {
   opacity:0;
 }
 
-
 elemento:hover h2 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -203,48 +202,64 @@ elemento:hover h2 {
 elemento:hover h4 {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
-    color: var(--light-accent);
+    color: var(--dark-accent);
 }
 
-// elemento:hover p {
-//     transition: all 1s ease;
-//     -webkit-transition: all 1s ease;
-//     color: var(--pale-grey);
-// }
+elemento:hover p {
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    color: var(--darker-grey);
+}
+
+elemento:after {
+  content: '';
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: -0.4vh;
+  border-top: 0.2vh solid;
+  border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
+  border-image-slice: 1;
+}
 
 footer {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: auto;
-  margin-top: -9vmin;
-  margin-bottom: 2vmin;
-  // padding-top: 5vh;
+  width: 100%;
+  padding-top: 7vh;
+  padding-bottom: 3vh;
   overflow:hidden;
 
   font-family: 'herolight', sans-serif;
+  font-size: small;
 
-  // background-image: linear-gradient(-90deg, var(--darker-grey) 5%, black 40%, black 60%, var(--darker-grey) 95%);
+  background-color: var(--lighter-accent);
+  z-index: -1;
 
   /* For text formatting. */
   display: flex;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
-  /* background: rgba(255, 255, 255, 0.2); */
-  color: white;
+  text-align: center;
 }
 
-elemento:after, footer:after {
-    content: '';
-    position: absolute;
-    width: 24%;
-    left: 38%;
-    top: -0.4vh;
-    border-top: 0.4vh solid;
-    border-image-source: linear-gradient(-90deg, rgba(0, 0, 0, 0), var(--light-accent), rgba(0, 0, 0, 0));
-    border-image-slice: 1;
+footer p {
+  color: var(--darker-grey);
+}
+
+footer:after {
+  content: '';
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: -0.4vh;
+  border-top: 0.6vh solid;
+  border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
+  border-image-slice: 1;
 }
 
 .arrow-container {
@@ -253,7 +268,7 @@ elemento:after, footer:after {
   // background-color: #0e242d;
   height: 1.7vh;
   width: 1.7vh;
-  top: calc(100vh - 2 * 1.7vh);
+  top: calc(100vh - 1.7 * 1.7vh);
   align-items: center;
   justify-content: center;
   animation-duration: 2s;
@@ -265,8 +280,8 @@ elemento:after, footer:after {
   height: 1.7vh;
   width: 1.7vh;
   border-style: solid;
-  border-color: var(--light-accent);
-  border-width: 0px 2px 2px 0px;
+  border-color: var(--darker-grey);
+  border-width: 0px 3px 3px 0px;
   transform: rotate(45deg);
   transition: border-width 500ms ease-in-out;
   // transform-origin: bottom;
@@ -280,6 +295,7 @@ elemento:after, footer:after {
 .bounce-arrow {
   animation-name: bounce-arrow;
   animation-timing-function: ease-in-out;
+  z-index: 10;
 }
 @keyframes bounce-arrow {
   0%   { transform: translateY(0); }
@@ -366,6 +382,7 @@ elemento:last-child:after {
     top: 0;
     transform: translateY(50%);
     text-align: center;
+  }
 }
 
 a:visited {

@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'herolights';
+  src: url('/fonts/hero-light-webfont.woff2') format('woff2'),
+       url('/fonts/hero-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'heroregular';
+  src: url('/fonts/hero-regular-webfont.woff2') format('woff2'),
+       url('/fonts/hero-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 400;
+  list-style-type: none;
+  font-style: normal;
+}
+
+.menu_button{
+  display: inline-block;
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  left: -0.3vw;
+  margin-left: 0%;
+  z-index: 11;
+}
+
+.menu {
+  display: inline-block;
+  position: absolute;
+  width: 56px;
+  top: 50%;
+  left: 100px;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  opacity: 1;
+  font-family:'herolight', sans-serif;
+  color: var(--menu-accent);
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu:before,
+.menu:after {
+  position: absolute;
+  transition: 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+}
+
+.menu:before {
+  content: "M \00a0 \00a0 \00a0 \00a0 U";
+  top: -60px;
+  left: -100%;
+  width: 215px;
+  z-index: 1;
+}
+
+.menu:after {
+  content: "N";
+  top: 50px;
+  left: 12%;
+  z-index: 1;
+}
+
+.menu .enable_hover{}
+
+.menu.enable_hover:hover:before,
+.menu.enable_hover:hover:after {
+  top: -4.3px;
+  opacity: 1;
+}
+
+.bar_container {
+  width: 27px;
+  height: 100%;
+  transform: translateX(-80%);
+  // -webkit-box-shadow: 0px 0px 9px 7px var(--darker-grey);
+  // -moz-box-shadow: 0px 0px 9px 7px var(--darker-grey);
+  // box-shadow: 0px 0px 9px 7px var(--darker-grey);
+}
+
+.bar {
+  width: 27px;
+  height: 2px;
+  background: var(--menu-accent);
+  border-radius: 30px;
+  margin-top: 0;
+  margin-bottom: 9.5px;
+  margin-left: 0px;
+  transform-origin: center center;
+  transform: none;
+  transition: transform 0.3s ease;
+}
+
+.hoverbar{
+  width: 33.8px;
+  transform: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.hoverbar:nth-child(1) {
+  transform: translateY(12px) translateX(-3px) rotate(45deg);
+}
+
+.hoverbar:nth-child(2) {
+  opacity: 0;
+  transition-delay: all .3s;
+}
+
+.hoverbar:nth-child(3) {
+  transform: translateY(-11px) translateX(-3px)  rotate(-45deg);
+}
+
+.fullpage_menu {
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  background-color: #0C0F13D9;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .5s ease-in-out, z-index .51s;
+}
+
+.visible_menu {
+  opacity: 1;
+  z-index: 10;
+}
+
+.menu_content > ul:first-of-type {
+  width: 100%;
+  list-style-type:none;
+}
+
+.menu_content {
+  display: flex;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.menu_content ol {
+  width: 100%;
+}
+
+.menu_content li, .menu_content a {
+  font-family: 'herolight', sans-serif;
+  font-size: calc(1.7vh * var(--font-scale));
+  color: var(--pale-grey);
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px var(--darker-grey);
+}
+
+.menu_content li{
+  line-height: calc(1.7vh * var(--font-scale) + 4vh);
+}
+
+.menu_content ol li ol{
+  padding-left: 10px;
+}
+
+.menu_content a {
+  display: block;
+  text-decoration: none;
+  color: var(--menu-accent);
+  background-color: transparent;
+  transition: background-color 0s;
+}
+
+.menu_content a:hover {
+  background-color: var(--menu-accent);
+  color: var(--darker-grey);
+  text-shadow: 0px 0px 0px var(--darker-grey);
+}
+
+.menu_content .disabled_link{
+  display: none;
+}
