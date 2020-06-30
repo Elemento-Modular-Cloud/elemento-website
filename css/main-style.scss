@@ -273,7 +273,7 @@ footer:after {
   // background-color: #0e242d;
   height: 1.7vh;
   width: 1.7vh;
-  top: calc(100vh - 2 * 1.7vh);
+  top: calc(100vh - 1.7 * 1.7vh);
   align-items: center;
   justify-content: center;
   animation-duration: 2s;
@@ -286,7 +286,7 @@ footer:after {
   width: 1.7vh;
   border-style: solid;
   border-color: var(--darker-grey);
-  border-width: 0px 2px 2px 0px;
+  border-width: 0px 3px 3px 0px;
   transform: rotate(45deg);
   transition: border-width 500ms ease-in-out;
   // transform-origin: bottom;
