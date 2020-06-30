@@ -108,15 +108,3 @@
     transform: scale(var(--target-scale));
   }
 }
-
-elemento:hover h2 {
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  color: var(--light-accent);
-}
-
-elemento:hover h4 {
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  color: var(--light-accent);
-}
