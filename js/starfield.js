@@ -10,7 +10,7 @@ var starFieldHeight = window.innerHeight;
 var starNumber = starFieldWidth * starFieldHeight /100000 * 20;
 
 addStars(starFieldWidth, starFieldHeight, starNumber);
-animateStars(starFieldWidth, 3);
+animateStars(starFieldWidth, 2.5);
 })();
 
 function getStarColor(index) {
@@ -87,6 +87,6 @@ setInterval(function() {
             stars[i].style.top = (topDiff) + 'px';
         }
     }
-}, 60);
+}, 70);
 
 }  
