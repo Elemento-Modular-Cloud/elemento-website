@@ -92,19 +92,19 @@
 
 @keyframes zoom-fade {
   0% {
-    opacity: 0; 
+    filter: brightness(0%) drop-shadow(0px 0px 20px black);
     transform: scale(1);
   }
   60% {
-    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 20px black);
     transform: scale(1.2);
   }
   70% {
-    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 20px black);
     transform: scale(1.2);
   }
   100% {
-    opacity: 1;
+    filter: brightness(100%) drop-shadow(0px 0px 20px black);
     transform: scale(var(--target-scale));
   }
 }

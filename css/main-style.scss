@@ -140,12 +140,12 @@ html {
 }
 
 @keyframes zoom-fade {
-  from {
-    opacity: 0; 
+  0% {
+    filter: brightness(0%) drop-shadow(0px 0px 20px black);
     transform: scale(1);
   }
-  to {
-    opacity: 1;
+  100% {
+    filter: brightness(100%) drop-shadow(0px 0px 20px black);
     transform: scale(1.2);
   }
 }
