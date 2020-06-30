@@ -186,11 +186,10 @@ elemento {
 
   width: 100%;
   top: 0;
-  height:80vh;
-  max-height: 80vh;
+  // height:80vh;
+  min-height: 80vh;
 
   position: relative;
-
   opacity: 1.;
 }
 
@@ -223,6 +222,7 @@ elemento p {
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
     color: var(--darker-grey);
+    white-space: pre-line;
 }
 
 .fulltext {
@@ -302,6 +302,12 @@ footer p {
   border-top: 4px solid;
   border-image-source: linear-gradient(-90deg, rgba(255, 255, 255, 0), var(--light-accent), rgba(255, 255, 255, 0));
   border-image-slice: 1;
+}
+
+.fulltext:first-of-type:after{
+  border-top: 0px solid;
+  border-image-source: none;
+  border-image-slice: 0;
 }
 
 .arrow-container {
