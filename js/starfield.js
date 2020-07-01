@@ -65,12 +65,13 @@ function animateStars(starFieldHeight) {
     var vw = window.innerWidth+"px";
 
     setInterval(function() {
-    
-        for (var i = 1; i < stars.length; i++) {
-            if(stars[i].style.right <= vw){
-                currentTop = parseInt(stars[i].style.top, 10);
-                topChangeAmount = getStarRelativeSpeed(i);
-                stars[i].style.top = ((currentTop + topChangeAmount) % starFieldHeight) + 'px';
+        if(window.pageYOffset < starFieldHeight){
+            for (var i = 1; i < stars.length; i++) {
+                if(stars[i].style.right <= vw){
+                    currentTop = parseInt(stars[i].style.top, 10);
+                    topChangeAmount = getStarRelativeSpeed(i);
+                    stars[i].style.top = ((currentTop + topChangeAmount) % starFieldHeight) + 'px';
+                }
             }
         }
     }, 75);
