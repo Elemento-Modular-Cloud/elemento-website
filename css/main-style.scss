@@ -53,8 +53,8 @@ html {
     font-family: 'heroregular', sans-serif;
     font-size: calc(2.3vh * var(--font-scale));
     font-weight: bold;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
     text-transform: uppercase;
   }
@@ -63,16 +63,16 @@ html {
     font-family: 'heroregular', sans-serif;
     font-size: calc(1.8vh * var(--font-scale));
     font-weight: bold;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
   }
 
   p, a {
     font-family: 'Muli', sans-serif;
     font-size: calc(1.4vh * var(--font-scale));
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
   }
 }
@@ -82,8 +82,8 @@ html {
     font-family: 'heroregular', sans-serif;
     font-size: calc(1.9vh * var(--font-scale));
     font-weight: bold;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
     text-transform: uppercase;
   }
@@ -92,16 +92,16 @@ html {
     font-family: 'heroregular', sans-serif;
     font-size: calc(1.5vh * var(--font-scale));
     font-weight: bold;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
   }
 
   p, a {
     font-family: 'Muli', sans-serif;
     font-size: calc(1.1vh * var(--font-scale));
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--pale-grey);
   }
 }
@@ -207,20 +207,20 @@ elemento {
 }
 
 elemento h2 {
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--dark-accent);
 }
 
 elemento h4 {
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--dark-accent);
 }
 
 elemento p {
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: color 1s ease;
+    -webkit-transition: color 1s ease;
     color: var(--darker-grey);
     white-space: pre-line;
 }
@@ -234,39 +234,41 @@ elemento p {
   color: var(--darker-grey);
   white-space: pre-line;
   font-size: calc(1.4vh * var(--font-scale));
+  padding-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .fulltext question {
   font-family: 'heroregular';
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: color 1s ease;
   color: var(--darker-grey);
 }
 
 .fulltext answer {
   font-family: 'herobold';
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: color 1s ease;
   color: var(--light-accent);
 }
 
 .fulltext emphasis {
   font-family: 'heroregular';
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: color 1s ease;
   color: var(--dark-accent);
   font-size: calc(2vh * var(--font-scale));
 }
 
 .fulltext p {
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: color 1s ease;
   color: var(--darker-grey);
 }
 
 elemento:hover h4, .fulltext:hover answer {
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: color 1s ease;
   color: var(--menu-accent);
 }
 
