@@ -64,10 +64,10 @@
 
 @keyframes wave {
   0% {
-    transform: translateX(0);
+    left: 0;
   }
   100% {
-    transform: translateX(-100vw);
+    left: -100vw;
   }
 }
 
