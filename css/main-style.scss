@@ -283,7 +283,6 @@ footer {
   overflow:hidden;
 
   font-family: 'herolight', sans-serif;
-  font-size: small;
 
   background-color: var(--lighter-accent);
   z-index: -1;
@@ -297,8 +296,9 @@ footer {
   text-align: center;
 }
 
-footer p {
+footer p, footer a {
   color: var(--darker-grey);
+  font-size: 1.2vh;
 }
 
 .fulltext:after, footer:after, elemento:after {
