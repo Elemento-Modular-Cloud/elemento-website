@@ -1,16 +1,17 @@
 (function () {
 var starFieldWidth = screen.width;
+var starFieldHeight = screen.height;
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
     starFieldWidth = document.documentElement.clientWidth;
+    starFieldHeight = document.documentElement.clientHeight;
 }
 
-var starFieldHeight = window.innerHeight;
 var starNumber = starFieldWidth * starFieldHeight /100000 * 13;
 
 addStars(starFieldWidth, starFieldHeight, starNumber);
-animateStars(starFieldWidth, 2.5);
+animateStars(starFieldHeight);
 })();
 
 function getStarColor(index) {
@@ -55,20 +56,21 @@ var numberOfStars = noOfStars;
     }
 }
 
-function animateStars(starFieldWidth, speedFactor) {
+function animateStars(starFieldHeight) {
     var starField = document.getElementById('starfield');
     var stars = starField.childNodes;
 
-    var vw = window.innerWidth+"px";
     var currentTop = 0;
     var topChangeAmount = 0.;
+    var vw = window.innerWidth+"px";
 
     setInterval(function() {
+    
         for (var i = 1; i < stars.length; i++) {
             if(stars[i].style.right <= vw){
                 currentTop = parseInt(stars[i].style.top, 10);
                 topChangeAmount = getStarRelativeSpeed(i);
-                stars[i].style.top = ((currentTop + topChangeAmount) % window.innerHeight) + 'px';
+                stars[i].style.top = ((currentTop + topChangeAmount) % starFieldHeight) + 'px';
             }
         }
     }, 75);
