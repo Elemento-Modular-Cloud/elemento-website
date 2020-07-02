@@ -39,11 +39,10 @@ function getStarDistance(index) {
 function getStarRelativeSpeed(index) {
     return (index % 2) + 1.;
 }
-  
-function addStars(starFieldWidth, starFieldHeight, noOfStars) {
-var starField = document.getElementById('starfield');
-var numberOfStars = noOfStars;
 
+function addStars(starFieldWidth, starFieldHeight, noOfStars) {
+    var starField = document.getElementById('starfield');
+    var numberOfStars = noOfStars;
     for (var i = 0; i < numberOfStars; i++) {
         var star = document.createElement('div');
         star.className = 'star' + ' ' + getStarColor(i) + ' ' + getStarDistance(i);
@@ -59,20 +58,16 @@ var numberOfStars = noOfStars;
 function animateStars(starFieldHeight) {
     var starField = document.getElementById('starfield');
     var stars = starField.childNodes;
-
     var currentTop = 0;
-    var topChangeAmount = 0.;
-    var vw = window.innerWidth+"px";
-
     setInterval(function() {
         if(window.pageYOffset < starFieldHeight){
+            starField.style.visibility = "visible";
             for (var i = 1; i < stars.length; i++) {
-                if(stars[i].style.right <= vw){
-                    currentTop = parseInt(stars[i].style.top, 10);
-                    topChangeAmount = getStarRelativeSpeed(i);
-                    stars[i].style.top = ((currentTop + topChangeAmount) % starFieldHeight) + 'px';
-                }
+                currentTop = parseInt(stars[i].style.top, 10);
+                stars[i].style.top = ((currentTop + getStarRelativeSpeed(i)) % starFieldHeight) + 'px';
             }
+        } else {
+            starField.style.visibility = "hidden";
         }
     }, 75);
 }  
