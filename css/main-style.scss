@@ -39,9 +39,6 @@ body {
 }
 
 html {
-  // margin:0;
-  // padding:0;
-  /* font-family: 'Muli', sans-serif; */
   font-family: 'herolight', sans-serif;
   font-size: 17px;
   color: var(--pale-grey);
@@ -118,17 +115,12 @@ html {
 }
 
 .first-section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: 100vh;
-
-  /* For text formatting. */
   display: flex;
   flex: 1 1 auto;
   margin: 0 auto;
   z-index: 5;
-  
   align-items: center;
   justify-content: center;
   color: white;
@@ -165,12 +157,6 @@ html {
 }
 
 elemento {
-  // position: relative;
-  // margin-top: -0.4vh;
-  // padding: 15vh 0px 0px 0px;
-  // height: 37vmin;
-  // max-width: 100vw;
-
   display: block;
   align-items: center;
   justify-content: center;
@@ -183,12 +169,10 @@ elemento {
   -webkit-transform-style: preserve-3d;
   -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
-
   width: 100%;
   top: 0;
   height: 80vh;
   min-height: 80vh;
-
   position: relative;
   opacity: 1.;
 }
@@ -206,13 +190,7 @@ elemento {
   opacity:0;
 }
 
-elemento h2 {
-    transition: color 1s ease;
-    -webkit-transition: color 1s ease;
-    color: var(--dark-accent);
-}
-
-elemento h4 {
+elemento h2, elemento h4 {
     transition: color 1s ease;
     -webkit-transition: color 1s ease;
     color: var(--dark-accent);
@@ -238,56 +216,48 @@ elemento p {
   padding-top: 5vh;
 }
 
-.fulltext question {
+.fulltext question, .fulltext answer, .fulltext emphasis, .fulltext p {
   font-family: 'heroregular';
   transition: color 1s ease;
   -webkit-transition: color 1s ease;
+}
+
+.fulltext question {
   color: var(--darker-grey);
 }
 
 .fulltext answer {
   font-family: 'herobold';
-  transition: color 1s ease;
-  -webkit-transition: color 1s ease;
   color: var(--light-accent);
 }
 
 .fulltext emphasis {
-  font-family: 'heroregular';
-  transition: color 1s ease;
-  -webkit-transition: color 1s ease;
   color: var(--dark-accent);
   font-size: calc(2vh * var(--font-scale));
 }
 
 .fulltext p {
-  transition: color 1s ease;
-  -webkit-transition: color 1s ease;
   color: var(--darker-grey);
 }
 
 elemento:hover h4, .fulltext:hover answer {
-  transition: color 1s ease;
-  -webkit-transition: color 1s ease;
   color: var(--menu-accent);
 }
 
+elemento:last-child:after {
+  border-top: none;
+}
+
 footer {
-  /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   height: auto;
   width: 100%;
   padding-top: 7vh;
   padding-bottom: 3vh;
   overflow:hidden;
-
   font-family: 'herolight', sans-serif;
-
   background-color: var(--lighter-accent);
   z-index: -1;
-
-  /* For text formatting. */
   display: flex;
   top: 0;
   left: 0;
@@ -321,7 +291,6 @@ footer p, footer a {
 .arrow-container {
   position: absolute;
   display: inline-block;
-  // background-color: #0e242d;
   height: 1.7vh;
   width: 1.7vh;
   top: calc(100vh - 1.7 * 1.7vh);
@@ -340,7 +309,6 @@ footer p, footer a {
   border-width: 0px 3px 3px 0px;
   transform: rotate(45deg);
   transition: border-width 500ms ease-in-out;
-  // transform-origin: bottom;
 }
 
 .arrow:hover {
@@ -357,11 +325,6 @@ footer p, footer a {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-25%); }
   100% { transform: translateY(0); }
-}
-
-elemento:last-child:after {
-  border-top: none;
-  
 }
 
 .logo {
