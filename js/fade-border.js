@@ -1,11 +1,9 @@
-$(document).ready(function() {
-var myElement = $('.arrow-container');
-var stars = $('.stars');
-$(window).on('scroll', function () {
-        var st = $(this).scrollTop();
-        myElement.css({
-            'opacity': 1 - st * .7 / 600
-        });
-    });
-});
-    
+function fadeScroll() {
+    var arrow = document.getElementsByClassName("arrow-container")[0];
+    arrow.style.opacity = 1 - window.pageYOffset * .7 / 600
+}
+
+function addListeners() {
+    window.addEventListener('scroll', fadeScroll);
+}
+addListeners();
