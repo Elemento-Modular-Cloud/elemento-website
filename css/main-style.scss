@@ -30,12 +30,13 @@
 body {
   width: 100vw;
   left: 0;
-  transform-style: preserve-3d;
   perspective: 1000;
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 html {
@@ -44,6 +45,12 @@ html {
   font-size: 17px;
   color: var(--pale-grey);
   overflow-x: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 @media screen and (orientation:landscape) {
