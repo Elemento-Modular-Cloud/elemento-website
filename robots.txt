@@ -1,4 +1,9 @@
 User-agent: *
+
 Disallow: /img/
 Disallow: /fonts/
 Disallow: /js/
+Disallow: /css/
+Disallow: /contents/
+
+Sitemap: https://elemento.cloud/sitemap.xml
