@@ -6,4 +6,7 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /contents/
 
+Noindex: /pages/
+Noindex: /contents/
+
 Sitemap: https://elemento.cloud/sitemap.xml
