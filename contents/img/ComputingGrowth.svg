@@ -1,0 +1,40 @@
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 279.29563 354.22861">
+  <defs>
+    <style>
+      .cls-1, .cls-2{
+        opacity: 0.70;
+      }
+
+      .cls-3, .cls-4{
+        opacity: 0.80;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #7b14ff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #4b0c9b;
+      }
+
+      .cls-5 {
+        fill: #323e4f;
+      }
+
+      .cls-6 {
+        fill: #212935;
+      }
+    </style>
+  </defs>
+  <title>ComputingGrowth</title>
+  <polygon class="cls-1" points="138.967 0 249.322 54.936 249.322 188.937 138.967 243.873 138.967 0"/>
+  <polygon class="cls-2" points="138.967 0 138.967 243.873 29.973 188.937 29.973 54.936 138.967 0"/>
+  <polygon class="cls-3" points="138.967 19.074 261.584 80.148 261.584 229.121 138.967 290.195 138.967 19.074"/>
+  <polygon class="cls-4" points="138.967 19.074 138.967 290.195 17.711 229.121 17.711 80.148 138.967 19.074"/>
+  <polygon class="cls-5" points="138.967 43.597 279.296 113.572 279.296 284.254 138.967 354.229 138.967 43.597"/>
+  <polygon class="cls-6" points="138.967 43.597 138.967 354.229 0 284.254 0 113.572 138.967 43.597"/>
+</svg>
