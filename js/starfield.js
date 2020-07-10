@@ -1,6 +1,6 @@
 (function () {
 var starFieldWidth = screen.width;
-var starFieldHeight = screen.height;
+var starFieldHeight = window.innerHeight;
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 if (isMobile) {
