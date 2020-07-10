@@ -125,6 +125,7 @@ html {
 .first-section {
   position: relative;
   height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex: 1 1 auto;
   margin: 0 auto;
@@ -307,6 +308,7 @@ footer p, footer a {
   height: 1.7vh;
   width: 1.7vh;
   top: calc(100vh - 1.7 * 1.7vh);
+  left: calc(50vw - 1.7vh / 2);
   align-items: center;
   justify-content: center;
   animation-duration: 2s;

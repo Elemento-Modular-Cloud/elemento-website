@@ -35,30 +35,17 @@
 
   <body class="page-background">
     <div id="starfield"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
+    <div w3-include-html="/waves.html"></div>
 
     <div w3-include-html="/topmenu.html"></div>
 
-    <section class="first-section" min-height="100vh" id="logo">
+    <section class="first-section" id="logo">
       <img src="/img/logos/MarkWebTM.svg">
-      <div class="arrow-container bounce-arrow">
-        <a href="#1">
-          <div class="arrow"></div>
-        </a>
-      </div>
     </section>
 
     <div w3-include-html="/contents/indexcontent.html"></div>
 
     <div w3-include-html="/footer.html"></div>
-
-    <!-- <script>
-    AOS.init({
-      duration: 1000,
-    });
-    </script> -->
 
     <script>
       w3IncludeHTML();
